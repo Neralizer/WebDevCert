@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name = "keywords" content="Google Clone">
+	<meta name = "description" content="Google Clone">
+	<title>Google Clone</title>
+	<link href="googleClone.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<ul id="nav-left">
+			<li><a href="#">About</a></li>
+			<li><a href="#">Store</a></li>
+		</ul>
+		<ul id="nav-right">
+			<li><a href="#">Gmail</a></li>
+			<li><a href="#">Images</a></li>
+			<li><input type="button" id="sign-in" name="Sign In" value="Sign In" /></li>
+		</ul>
+		<script type="text/javascript">
+			function focusIt(){
+				var mySearchBox = document.getElementById("search-box");
+				mySearchBox.focus();
+			}
+			onload = focusIt;
+		</script>
+	</header>
+<div id="content">
+	<div id="logo">
+		<img src="googleLogo.png" alt="Google Logo" width="350px"/>
+	</div>
+	<div id="search">
+		<input id="search-box" type="text" name="search"/>
+	</div>
+	<div id="search-buttons">
+	<input type="button" class="button" name="google" value="Google Search"/>
+	<input type="button" class="button" name="google" value="I'm Feeling Lucky"/>
+</div>
+</div>
+<footer>
+	<ul id="footer-left">
+		<li><a href="#">Advertising</a></li>
+		<li><a href="#">Business</a></li>
+		<li><a href="#">About</a></li>
+	</ul>
+	<ul id="footer-right">
+		<li><a href="#">Privacy</a></li>
+		<li><a href="#">Terms</a></li>
+		<li><a href="#">Settings</a></li>
+	</ul>
+</footer>
+</body>
+</html>

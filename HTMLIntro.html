@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="Sample HTML">
+		<meta name="description" content="Sample HTML">
+		<title>Sample Intro</title>
+		<link href="styles.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<style type="text/css">
+		table {
+			font-family: sans-serif;
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		th {
+			background-color: black;
+			color: white;
+		}
+
+		td,th {
+			padding: 15px;
+			text-align: left;
+			border: 1px solid grey;
+		}
+
+		tr:nth-child(even) {
+			background-color: brown;
+			color: white;
+		}
+		
+		tr:nth-child(odd) {
+			background-color: white;
+			color: brown;
+		}
+
+		.center {
+			justify-content: center;
+		}
+
+	</style>
+	</head>
+	<body>
+		<div> <!--Does this need to be in a separate div?-->
+			<nav>
+				<h3>My Nav Element</h3>
+			</nav>
+		</div> 
+		<div id="heading">
+			<h1>This is the body of my sample HTML page.</h1>
+			<hr>
+		</div>
+		<div>This is a div tag.</div>
+		<span style="color: red;">I think this should be <q>indented</q>.</span>
+		<div class="content">This <pre>should</pre> not be indented, <br> because it's not in a span tag.</div>
+		<span class="highlight">GEDIT</span>
+		<p class="content highlight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam maximus magna lectus, sit amet porta sapien eleifend at. Sed tincidunt maximus nisl, a interdum erat fringilla quis.</p>
+		<p class="content highlight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam maximus magna lectus, sit amet porta sapien eleifend at. Sed tincidunt maximus nisl, a interdum erat fringilla quis.</p>
+		<h2>This is a smaller <mark>heading</mark> than my H1 tag.</h2>
+		<p>Here's some sweet p tag.</p>
+		<p>Here's a <a href="https://www.w3schools.com/tags/tag_p.asp" target="_blank">sweet link</a> about p tags in my p tag.</p>
+		<div>
+			<ol>
+				<li>My <small>first</small> point.</li>
+				<li>My <del>second</del> point.</li>
+				<li>My <ins>TIRD</ins> point.</li>
+			</ol>
+			<ul class="content-bullets">
+				<li>This is an <em>unorganized</em> <sup>list</sup>.</li>
+				<li>It's <sub>just</sub> <b>bullet points</b>.</li>
+			</ul>
+		</div>
+		<div id="sub">
+		<img src="/home/jared/Downloads/Rice.jpg" alt="Condoleezza Rice!" usemap="#Rice">
+		<map name="Rice">
+			<area shape="circle" coords="10,10,25,25" href="https://en.wikipedia.org/wiki/Condoleezza_Rice">
+		</map>
+	</div>
+	<br><br><br>
+	<div id="pricing-table">
+		<div class="package">
+			<h2>Package 1</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+			<p>9.99/m</p>
+		</div>
+		<div class="package">
+			<h2>Package 2</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+			<p>19.99/m</p>
+		</div>
+		<div class="package">
+			<h2>Package 3</h2>
+			<a href="https://www.amazon.com">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</a>
+			<p>49.99/m</p>
+		</div>
+	</div>
+	<table class="center">
+		<tr>
+			<th>Name</th>
+			<th>Avg</th>
+			<th>HRs</th>
+			<th>RBIs</th>
+		</tr>
+		<tr>
+			<td>Altuve, Jose</td>
+			<td>.350</td>
+			<td>32</td>
+			<td>120</td>
+			<td rowspan="2">Updated Daily</td>
+		</tr>
+		<tr>
+			<td colspan="6">Totals...</td>
+		</tr>
+	</table>
+	<form action="contact_form.php" method="get" oninput="invoice.value=parseInt(total.value)+parseInt(shipping.value)">
+		<label form="name">Name:</label>
+		<input type="text" name="Name" placeholder="Jose Altuve, again, if you want" required><br><label form="name">Email:</label><input type="text" name="Email" value="johnlegend@mac.com" required><br>
+		<label form="name">Message"</label>
+		<textarea name="message" rows="10" cols="100"></textarea><br>
+		<label form="options">Packing Requirements (select all that apply):</label><br>
+		<input type="checkbox" name="options" value="premium">Premium<br>
+		<input type="checkbox" name="options" value="automated">Automated<br>
+		<input type="checkbox" name="options" value="rush">Rush<br>
+		<label form="delivery">Shipping Preference</label><br>
+		<input type="radio" name="delivery" value="in_store">In Store<br>
+		<input type="radio" name="delivery" value="shipping">Shipping<br>
+		<label form="source">How did you hear about us?</label>
+		<select name="source" multiple="true">
+		<option value="google">Google</option>
+		<option value="yahoo">Yahoo</option>
+		<option value="fb">Facebook</option>
+		<option value="twitter">Twitter</option>
+		</select>
+		<label form="shipping_method">Shipping Method</label>
+		<select name="shipping_method">
+			<optgroup label="Business">
+				<option value="biz_overnight">Overnight</option>
+				<option value="biz_ground">Ground</option>
+			</optgroup>
+			<optgroup label="Residential">
+				<option value="res_overnight">Overnight</option>
+				<option value="res_ground">Ground</option>
+			</optgroup>
+		</select><br>
+		<label form="total">Subtotal:</label><br>
+		<input type="text" name="total" value="0"><br>
+		<label form="shipping">Shipping:</label>
+		<input type="text" name="shipping" value="9"><br>
+		Total for invoice: <output name="invoice" form="totalTax"></output><br>
+		<input type="submit">
+	</form>
+	<p>Ampersand: &amp; &#38;</p>
+	<p>Copyright: &copy; &#169;</p>
+	<p>Registered Trademark: &reg;</p>
+	<p>&nbsp; This is a sentence with some white space.</p>
+	<p>Greater than: &gt;</p>
+	<p>Lesser than: &lt;</p>
+	<p>Double quotes: &quot;</p>
+	<p>Single quotes: &apos;</p>
+	<div id="blocks">
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+		<div class="block"></div>
+	</div>
+	</body>
+</html>
